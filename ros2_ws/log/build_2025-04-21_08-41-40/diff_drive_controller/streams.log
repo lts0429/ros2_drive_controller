@@ -1,0 +1,11 @@
+[0.014s] Invoking command in '/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/build/diff_drive_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tingsheng/ws_isaacsim/install/isaac_ros_navigation_goal:/home/tingsheng/ws_moveit/install/moveit_configs_utils:/home/tingsheng/ws_moveit/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/build/diff_drive_controller -- -j16 -l16
+[0.057s] [35m[1mConsolidate compiler generated dependencies of target talker[0m
+[0.073s] [ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[0.209s] [01m[K/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/src/diff_drive_controller/src/publisher_member_function.cpp:5:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/twist.hpp: No such file or directory
+[0.209s]     5 | #include [01;31m[K"geometry_msgs/msg/twist.hpp"[m[K
+[0.209s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.209s] compilation terminated.
+[0.219s] gmake[2]: *** [CMakeFiles/talker.dir/build.make:76: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1
+[0.219s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/talker.dir/all] Error 2
+[0.219s] gmake: *** [Makefile:146: all] Error 2
+[0.222s] Invoked command in '/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/build/diff_drive_controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tingsheng/ws_isaacsim/install/isaac_ros_navigation_goal:/home/tingsheng/ws_moveit/install/moveit_configs_utils:/home/tingsheng/ws_moveit/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/build/diff_drive_controller -- -j16 -l16

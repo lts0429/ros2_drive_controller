@@ -1,0 +1,7 @@
+[01m[K/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/src/diff_drive_controller/src/publisher_member_function.cpp:[m[K In member function ‘[01m[Kvoid MinimalSubscriber::topic_callback(geometry_msgs::msg::Twist_<std::allocator<void> >::SharedPtr) const[m[K’:
+[01m[K/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/src/diff_drive_controller/src/publisher_member_function.cpp:25:60:[m[K [01;31m[Kerror: [m[K‘[01m[Kwheelbase_[m[K’ was not declared in this scope
+   25 |       differential_kinematics::calculate_wheel_speeds(msg, [01;31m[Kwheelbase_[m[K, left_speed, right_speed);
+      |                                                            [01;31m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/listener.dir/build.make:76: CMakeFiles/listener.dir/src/publisher_member_function.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/listener.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

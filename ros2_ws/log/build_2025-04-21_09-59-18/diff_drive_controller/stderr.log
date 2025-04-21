@@ -1,0 +1,8 @@
+[01m[K/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/src/diff_drive_controller/src/dummy.cpp:[m[K In constructor ‘[01m[KMinimalSubscriber::MinimalSubscriber()[m[K’:
+[01m[K/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/src/diff_drive_controller/src/dummy.cpp:13:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+   13 |             [01;31m[Ksubscription_[m[K = this->create_subscription<geometry_msgs::msg::Twist>(
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+      |             [32m[Krmw_subscription_t[m[K
+gmake[2]: *** [CMakeFiles/dummy.dir/build.make:76: CMakeFiles/dummy.dir/src/dummy.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/dummy.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

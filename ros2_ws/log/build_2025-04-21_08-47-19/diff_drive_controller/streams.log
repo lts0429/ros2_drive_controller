@@ -1,0 +1,26 @@
+[0.013s] Invoking command in '/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/build/diff_drive_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tingsheng/ws_isaacsim/install/isaac_ros_navigation_goal:/home/tingsheng/ws_moveit/install/moveit_configs_utils:/home/tingsheng/ws_moveit/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/build/diff_drive_controller -- -j16 -l16
+[0.056s] [35m[1mConsolidate compiler generated dependencies of target listener[0m
+[0.071s] [ 50%] [32mBuilding CXX object CMakeFiles/listener.dir/src/publisher_member_function.cpp.o[0m
+[5.560s] [100%] [32m[1mLinking CXX executable listener[0m
+[5.813s] [100%] Built target listener
+[5.825s] Invoked command in '/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/build/diff_drive_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tingsheng/ws_isaacsim/install/isaac_ros_navigation_goal:/home/tingsheng/ws_moveit/install/moveit_configs_utils:/home/tingsheng/ws_moveit/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/build/diff_drive_controller -- -j16 -l16
+[5.834s] Invoking command in '/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/build/diff_drive_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tingsheng/ws_isaacsim/install/isaac_ros_navigation_goal:/home/tingsheng/ws_moveit/install/moveit_configs_utils:/home/tingsheng/ws_moveit/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --install /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/build/diff_drive_controller
+[5.841s] -- Install configuration: ""
+[5.841s] -- Execute custom install script
+[5.842s] -- Symlinking: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/lib/diff_drive_controller/listener
+[5.850s] -- Up-to-date symlink: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/ament_index/resource_index/package_run_dependencies/diff_drive_controller
+[5.850s] -- Up-to-date symlink: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/ament_index/resource_index/parent_prefix_path/diff_drive_controller
+[5.850s] -- Up-to-date symlink: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/diff_drive_controller/environment/ament_prefix_path.sh
+[5.850s] -- Up-to-date symlink: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/diff_drive_controller/environment/ament_prefix_path.dsv
+[5.850s] -- Up-to-date symlink: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/diff_drive_controller/environment/path.sh
+[5.850s] -- Up-to-date symlink: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/diff_drive_controller/environment/path.dsv
+[5.850s] -- Up-to-date symlink: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/diff_drive_controller/local_setup.bash
+[5.850s] -- Up-to-date symlink: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/diff_drive_controller/local_setup.sh
+[5.850s] -- Up-to-date symlink: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/diff_drive_controller/local_setup.zsh
+[5.850s] -- Up-to-date symlink: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/diff_drive_controller/local_setup.dsv
+[5.850s] -- Symlinking: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/diff_drive_controller/package.dsv
+[5.859s] -- Up-to-date symlink: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/ament_index/resource_index/packages/diff_drive_controller
+[5.859s] -- Up-to-date symlink: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/diff_drive_controller/cmake/diff_drive_controllerConfig.cmake
+[5.859s] -- Up-to-date symlink: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/diff_drive_controller/cmake/diff_drive_controllerConfig-version.cmake
+[5.859s] -- Up-to-date symlink: /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/install/diff_drive_controller/share/diff_drive_controller/package.xml
+[5.861s] Invoked command in '/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/build/diff_drive_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tingsheng/ws_isaacsim/install/isaac_ros_navigation_goal:/home/tingsheng/ws_moveit/install/moveit_configs_utils:/home/tingsheng/ws_moveit/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --install /home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/build/diff_drive_controller

@@ -1,0 +1,7 @@
+[01m[K/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/src/diff_drive_controller/src/dummy.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/src/diff_drive_controller/src/dummy.cpp:20:35:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   20 |     rclcpp::spin(MinimalSubscriber[01;31m[K)[m[K;
+      |                                   [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/dummy.dir/build.make:76: CMakeFiles/dummy.dir/src/dummy.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/dummy.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
