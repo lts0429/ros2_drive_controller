@@ -1,9 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target listener[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/listener.dir/src/publisher_member_function.cpp.o[0m
-[01m[K/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/src/diff_drive_controller/src/publisher_member_function.cpp:5:10:[m[K [01;31m[Kfatal error: [m[Kdifferential_kinematics.hpp: No such file or directory
-    5 | #include [01;31m[K"differential_kinematics.hpp"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/listener.dir/build.make:76: CMakeFiles/listener.dir/src/publisher_member_function.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/listener.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
