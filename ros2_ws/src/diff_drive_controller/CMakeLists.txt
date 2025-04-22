@@ -16,10 +16,10 @@ include_directories(
   include
 )
 
-add_executable(listener src/publisher_member_function.cpp)
-ament_target_dependencies(listener rclcpp std_msgs geometry_msgs)
+add_executable(diff_drive_controller src/publisher_member_function.cpp)
+ament_target_dependencies(diff_drive_controller rclcpp std_msgs geometry_msgs)
 install(TARGETS
-  listener
+  diff_drive_controller
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
@@ -33,5 +33,9 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}/
+)
 
 ament_package()
