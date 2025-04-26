@@ -1,0 +1,8 @@
+dd_controller:
+  ros__parameters:
+    wheel_radius: 0.1
+    wheel_base: 0.4
+    left_wheels:
+      - front_left_wheel
+    right_wheels:
+      - front_right_wheel

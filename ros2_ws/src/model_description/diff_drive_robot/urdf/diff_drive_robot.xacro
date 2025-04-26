@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<robot name="diff_drive_robot" xmlns:xacro="http://ros.org/wiki/xacro"> 
+
+  <!-- #region inertia -->
+  <xacro:macro name="cylinder_inertia" params="m r h">
+    <inertia  ixx="${m*(3*r*r+h*h)/12}" ixy = "0" ixz = "0"
+      iyy="${m*(3*r*r+h*h)/12}" iyz = "0"
+      izz="${m*r*r/2}"/>
+  </xacro:macro>
+
+  <xacro:macro name="box_inertia" params="m x y z">
+    <inertia  ixx="${m*(y*y+z*z)/12}" ixy = "0" ixz = "0"
+      iyy="${m*(x*x+z*z)/12}" iyz = "0"
+      izz="${m*(x*x+z*z)/12}"/>
+  </xacro:macro>
+
+  <xacro:macro name="sphere_inertia" params="m r">
+    <inertia  ixx="${2*m*r*r/5}" ixy = "0" ixz = "0"
+      iyy="${2*m*r*r/5}" iyz = "0"
+      izz="${2*m*r*r/5}"/>
+  </xacro:macro>
+  <!-- #endregion -->
+
+  <!-- #region: chassis and footprint -->
+  <link name="base_link">
+  </link>
+
+  <link name="chassis">
+    <visual>
+      <geometry>
+        <box size="0.5 0.3 0.2"></box>
+      </geometry>
+      <material name="chassis_color">
+          <color rgba="1 0.2 0 1"/>
+      </material>
+    </visual>
+    <collision name="chassis_collision">
+      <geometry>
+        <box size="0.5 0.3 0.2"></box>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <xacro:box_inertia m="10" x="0.5" y="0.3" z="0.2"/>
+    </inertial>
+  </link>
+
+  <joint name="chassis_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="chassis"/>
+  </joint>
+
+  <!-- #endregion -->
+
+  <!-- #region: wheel -->
+  <xacro:macro name="wheel" params="prefix x y z" >
+    
+    <link name="${prefix}_wheel">
+      <visual>
+        <origin rpy="1.5708 0 0" xyz="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.1" length="0.05"></cylinder>
+        </geometry>
+        <material name="wheel_color">
+          <color rgba="0.1 0.1 0.1 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin rpy="1.5708 0 0" xyz="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.1" length="0.05"></cylinder>
+        </geometry>
+      </collision>
+      <inertial>
+        <origin rpy="1.5708 0 0" xyz="0 0 0"/>
+        <mass value="1"/>
+        <xacro:cylinder_inertia m="1" r="0.1" h="0.05"/>
+      </inertial>
+    </link>
+
+    <joint name="${prefix}_wheel_joint" type="continuous">
+      <axis xyz="0 1 0"/>
+      <parent link="chassis"/>
+      <child link="${prefix}_wheel"/>
+      <origin rpy="0 0 0" xyz="${x} ${y} ${z}"/>
+      <limit effort="100" velocity="100.0"/>
+    </joint>
+
+  </xacro:macro>
+
+  <link name="caster_wheel">
+    <visual>
+      <geometry>
+        <sphere radius="0.05"/>   <!-- 3 cm radius ball -->
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0001" iyy="0.0001" izz="0.0001" ixy="0.0" ixz="0.0" iyz="0.0"/>
+    </inertial>
+  </link>
+
+  <joint name="caster_joint" type="fixed">
+    <parent link="chassis"/>  <!-- your robot's main body -->
+    <child link="caster_wheel"/>
+    <origin xyz="-0.2 0 -0.1" rpy="0 0 0"/>
+  </joint>
+
+  <xacro:wheel prefix="front_left" x="0.2" y="0.2" z="-0.05" />
+  <xacro:wheel prefix="front_right" x="0.2" y="-0.2" z="-0.05" />
+  <!-- #endregion -->
+
+  <!-- #region: controller -->
+  <gazebo>
+    <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
+      <parameters>$(find diff_drive_robot)/config/diff_drive_robot.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+  <ros2_control name="IgnitionSystem" type="system">
+    <hardware>
+      <plugin>ign_ros2_control/IgnitionSystem</plugin>
+    </hardware>
+    <joint name="front_left_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="front_right_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="back_left_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+        <joint name="back_right_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+  </ros2_control>
+  <!-- #endregion -->
+</robot>

@@ -1,0 +1,1 @@
+/home/tingsheng/Documents/Personal/ros2_drive_controller/ros2_ws/build/dd_controller/ament_cmake_environment_hooks/local_setup.sh
