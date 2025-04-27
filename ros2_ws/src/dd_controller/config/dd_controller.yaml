@@ -4,5 +4,7 @@ dd_controller:
     wheel_base: 0.4
     left_wheels:
       - front_left_wheel
+      - back_left_wheel
     right_wheels:
       - front_right_wheel
+      - back_left_wheel

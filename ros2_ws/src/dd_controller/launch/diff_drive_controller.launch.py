@@ -3,22 +3,17 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
-    # dd_controller = Node(
-    #     package='dd_controller',
-    #     executable='dd_controller',
-    #     name='dd_controller',
-    #     output='screen',
-    #     parameters=[{
-    #         'wheelbase': 0.6
-    #     }]
-    #     )
-
     dd_controller = Node(
         package='dd_controller',
         executable='dd_controller',
         name='dd_controller',
         output='screen',
-        parameters=['path/to/your/config.yaml']
+        parameters=[{
+            'wheel_base': 0.4,
+            'wheel_radius': 0.6,
+            'left_wheels': ['front_left_wheel', 'back_left_wheel'],
+            'right_wheels': ['front_right_wheel', 'back_right_wheel']
+        }]
         ) 
     
     return LaunchDescription([

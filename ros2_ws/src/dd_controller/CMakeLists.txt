@@ -16,7 +16,7 @@ include_directories(
   include
 )
 
-add_executable(dd_controller src/publisher_member_function.cpp)
+add_executable(dd_controller src/dd_controller.cpp)
 ament_target_dependencies(dd_controller rclcpp std_msgs geometry_msgs)
 install(TARGETS
   dd_controller
